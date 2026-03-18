@@ -1,0 +1,14 @@
+sk_mpc_controller:
+  ros__parameters:
+    horizon_N: 10           # 预测时域长度 N
+    q: 1.0                  # running cost 中 lateral error 权重 Q
+    qf: 5.0                 # 终端误差权重 Qf
+    r: 0.1                  # 控制增量权重 R
+    lambda0: 1.0            # λ0
+    kappa: 3.0              # λ(S̄) 中 κ
+    dmax_base: 1.0          # 在 S̄=1 时的最大 lateral step
+    force_threshold: 5.0    # |F| 安全阈值（示例）
+    torque_threshold: 0.5   # |M| 安全阈值（示例）
+    stability_min: 0.4      # 保护阈值 Smin
+    ft_history_len: 50      # 用于特征的 FT 历史长度
+
